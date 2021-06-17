@@ -2,27 +2,11 @@
 <html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Anime Template">
-    <meta name="keywords" content="Anime, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Anime Details </title>
+    @include('layouts.includes.meta')
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    @include('layouts.includes.link')
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    @include('layouts.includes.style')
 </head>
 
 <body>
@@ -32,47 +16,7 @@
     </div>
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a href="/">
-                            <img src="img/logo3.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="header__nav">
-                        <nav class="header__menu mobile-menu">
-                            <ul>
-                                <li class="active"><a href="/">Homepage</a></li>
-                                <li><a href=""> Browse <span class="arrow_carrot-down"></span></a>
-                                    <ul class="dropdown">
-                                        <li><a href="{{ route('extends.cat-extend')}}"> Categories </a></li>
-                                        <li><a href="{{ route('extends.det-extend')}}">Anime Details</a></li>
-                                        <li><a href="{{ route('extends.watch-extend')}}">Anime Watching</a></li>
-                                        <li><a href="{{ route('extends.blog-extend')}}">Blog Details</a></li>
-                                        <li><a href="{{ route('extends.sign-extend')}}">Sign Up</a></li>
-                                        <li><a href="{{ route('extends.login-extend')}}">Login</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{ route('extends.our-blog-extend')}}">Our Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="header__right">
-                        <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="{{ route('extends.login-extend')}}"><span class="icon_profile"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
+    @include('layouts.includes.header')
     <!-- Header End -->
 
     <!-- Breadcrumb Begin -->
@@ -259,27 +203,7 @@
         <!-- Anime Section End -->
 
         <!-- Footer Section Begin -->
-        <footer class="footer">
-            <div class="page-up">
-                <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-            </div>
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-6">
-                        <div class="footer__nav">
-                            <ul>
-                                <li class="active"><a href="/"> Homepage </a></li>
-                                <li><a href="{{ route('extends.cat-extend')}}">Categories</a></li>
-                                <li><a href="{{ route('extends.our-blog-extend')}}">Our Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                  </div>
-              </div>
-          </footer>
+        @include('layouts.includes.footer')
           <!-- Footer Section End -->
 
           <!-- Search model Begin -->
@@ -294,14 +218,7 @@
         <!-- Search model end -->
 
         <!-- Js Plugins -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/player.js"></script>
-        <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/mixitup.min.js"></script>
-        <script src="js/jquery.slicknav.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
+        @include('layouts.includes.script')
 
     </body>
 
